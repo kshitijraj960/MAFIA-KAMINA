@@ -12,24 +12,24 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     played_sec = time_to_seconds(played)
     duration_sec = time_to_seconds(dur)
     percentage = (played_sec / duration_sec) * 100
-    anon = math.floor(percentage)
-    if 0 < anon <= 10:
+    QN = math.floor(percentage)
+    if 0 < QN <= 10:
         bar = "◉—————————"
-    elif 10 < anon < 20:
+    elif 10 < QN < 20:
         bar = "—◉————————"
-    elif 20 <= anon < 30:
+    elif 20 <= QN < 30:
         bar = "——◉———————"
-    elif 30 <= anon < 40:
+    elif 30 <= QN < 40:
         bar = "———◉——————"
-    elif 40 <= anon < 50:
+    elif 40 <= QN < 50:
         bar = "————◉—————"
-    elif 50 <= anon < 60:
+    elif 50 <= QN < 60:
         bar = "—————◉————"
-    elif 60 <= anon < 70:
+    elif 60 <= QN < 70:
         bar = "——————◉———"
-    elif 70 <= anon < 80:
+    elif 70 <= QN < 80:
         bar = "———————◉——"
-    elif 80 <= anon < 95:
+    elif 80 <= QN < 95:
         bar = "————————◉—"
     else:
         bar = "—————————◉"
@@ -72,24 +72,24 @@ def telegram_markup_timer(_, chat_id, played, dur):
     played_sec = time_to_seconds(played)
     duration_sec = time_to_seconds(dur)
     percentage = (played_sec / duration_sec) * 100
-    anon = math.floor(percentage)
-    if 0 < anon <= 10:
+    QN = math.floor(percentage)
+    if 0 < QN <= 10:
         bar = "◉—————————"
-    elif 10 < anon < 20:
+    elif 10 < QN < 20:
         bar = "—◉————————"
-    elif 20 <= anon < 30:
+    elif 20 <= QN < 30:
         bar = "——◉———————"
-    elif 30 <= anon < 40:
+    elif 30 <= QN < 40:
         bar = "———◉——————"
-    elif 40 <= anon < 50:
+    elif 40 <= QN < 50:
         bar = "————◉—————"
-    elif 50 <= anon < 60:
+    elif 50 <= QN < 60:
         bar = "—————◉————"
-    elif 60 <= anon < 70:
+    elif 60 <= QN < 70:
         bar = "——————◉———"
-    elif 70 <= anon < 80:
+    elif 70 <= QN < 80:
         bar = "———————◉——"
-    elif 80 <= anon < 95:
+    elif 80 <= QN < 95:
         bar = "————————◉—"
     else:
         bar = "—————————◉"
@@ -235,11 +235,11 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
         [
             InlineKeyboardButton(
                 text=_["P_B_1"],
-                callback_data=f"AnonPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
+                callback_data=f"EBDPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
                 text=_["P_B_2"],
-                callback_data=f"AnonPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
+                callback_data=f"EBDPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
             ),
         ],
         [
